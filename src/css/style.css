@@ -363,12 +363,20 @@ template {
           box-sizing: border-box;
 }
 
-body {
-  font-family: 'Gotham Pro Light', sans-serif;
-  font-weight: 300;
+.contant {
   background-image: url(../img/body/протектор.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.contant::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #bfc4c7;
+  opacity: 0.3;
 }
 
 img {
@@ -378,8 +386,6 @@ img {
 .container {
   width: 1170px;
   margin: auto;
-  -webkit-box-shadow: 0px 4px 84px 126px rgba(0, 0, 0, 0.15), 0px 18px 25.08px 12.92px rgba(0, 0, 0, 0.53);
-          box-shadow: 0px 4px 84px 126px rgba(0, 0, 0, 0.15), 0px 18px 25.08px 12.92px rgba(0, 0, 0, 0.53);
 }
 
 @media (max-width: 1200px) {
@@ -416,24 +422,15 @@ img {
   position: relative;
 }
 
-.navbar::after {
-  content: '';
-  width: 100%;
-  height: 3px;
-  background-color: #f28d4f;
-  display: block;
-  position: absolute;
-  top: 70px;
-}
-
 .navbar-block {
-  background-color: #ffffff;
+  background-color: #ffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: 10px;
 }
 
 .navbar-blocks {
@@ -451,7 +448,7 @@ img {
 
 .navbar__logo {
   position: absolute;
-  top: 1px;
+  top: -9px;
   left: 12px;
   z-index: 1;
 }
@@ -470,6 +467,8 @@ img {
   margin-right: 22px;
   font-size: 13px;
   padding-left: 100px;
+  font-family: 'Gotham Pro Light', sans-serif;
+  font-weight: 300;
 }
 
 .navbar__phone {
@@ -485,6 +484,8 @@ img {
   -o-border-radius: 10px;
   color: #000000;
   font-size: 12px;
+  font-family: 'Gotham Pro Light', sans-serif;
+  font-weight: 300;
 }
 
 .navbar__menu {
@@ -497,6 +498,7 @@ img {
 }
 
 .navbar__hrefs {
+  display: inline-block;
   text-decoration: none;
   font-family: 'Gotham Pro Bold', sans-serif;
   font-weight: 700;
@@ -505,7 +507,91 @@ img {
   margin: 12px;
 }
 
+.navbar__hrefs::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  width: 0%;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.navbar__hrefs:hover::after {
+  width: 100%;
+}
+
 .navbar__button {
   padding: 15px 30px;
+  margin-right: 5px;
+}
+
+.header {
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #f28d4f;
+  display: block;
+  position: absolute;
+  top: 5px;
+}
+
+.header::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #f28d4f;
+  display: block;
+  position: absolute;
+  bottom: 35px;
+}
+
+.header-container {
+  background-color: #ffff;
+  padding-bottom: 50px;
+}
+
+.header-block {
+  background-image: url(../img/header/рисунок_сити.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin-top: 140px;
+  padding-left: 26px;
+}
+
+.header-text__title {
+  font-family: 'Gotham Pro Bold', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 48px;
+}
+
+.header__button {
+  margin-top: 260px;
+  margin-left: 190px;
+  padding: 16px 45px;
+}
+
+.header-image {
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */

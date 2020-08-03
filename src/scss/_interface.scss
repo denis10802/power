@@ -1,44 +1,57 @@
 * {
 	box-sizing: border-box;
 }
-body {
-	@include reg;
+
+.contant {
 	background-image: url(../img/body/протектор.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #bfc4c7;
+		opacity: 0.3;
+	}
 }
-img{
+
+img {
 	max-width: 100%;
 }
+
 .container {
 	width: 1170px;
 	margin: auto;
-	box-shadow: 0px 4px 84px 126px rgba(0, 0, 0, 0.15),0px 18px 25.08px 12.92px rgba(0, 0, 0, 0.53);	
 }
-@media (max-width: 1200px){
-	.container{
+
+@media (max-width: 1200px) {
+	.container {
 		width: 760px;
 	}
 }
 
-@media (max-width: 768px){
-	.container{
+@media (max-width: 768px) {
+	.container {
 		max-width: 580px;
 		width: 90%;
 	}
 }
 
 
-.button{
+.button {
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
-	background: linear-gradient(360deg, rgb(242,141,79) 0%, rgb(250,209,74) 100%);
-	border: none;	
-	@include bold;	
-	&:focus{
+	background: linear-gradient(360deg, rgb(242, 141, 79) 0%, rgb(250, 209, 74) 100%);
+	border: none;
+	@include bold;
+
+	&:focus {
 		outline: none;
 	}
 }

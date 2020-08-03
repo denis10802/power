@@ -1,0 +1,60 @@
+.header {
+	position: relative;
+
+	&::before {
+		content: '';
+		width: 100%;
+		height: 3px;
+		background-color: #f28d4f;
+		display: block;
+		position: absolute;
+		top: 5px;
+	}
+
+	&::after {
+		content: '';
+		width: 100%;
+		height: 3px;
+		background-color: #f28d4f;
+		display: block;
+		position: absolute;
+		bottom: 35px;
+	}
+
+	&-container {
+		background-color: $header-color;
+		padding-bottom: 50px;
+	}
+
+	&-block {
+		background-image: url(../img/header/рисунок_сити.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		display: flex;
+	}
+
+	&-text {
+		flex-basis: 50%;
+		margin-top: 140px;
+		padding-left: 26px;
+
+		&__title {
+			@include bold;
+			line-height: 1.2;
+			font-size: 48px;
+		}
+	}
+
+	&__button {
+		margin-top: 260px;
+		margin-left: 190px;
+		padding: 16px 45px;
+	}
+
+	&-image {
+		flex-basis: 55%;
+		z-index: 1;
+	}
+
+}
