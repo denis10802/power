@@ -2,12 +2,11 @@
 	box-sizing: border-box;
 }
 
-.contant {
+body {
 	background-image: url(../img/body/протектор.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-
 	&::before {
 		content: '';
 		position: absolute;
@@ -23,8 +22,10 @@ img {
 }
 
 .container {
-	width: 1170px;
+	width: 1180px;
 	margin: auto;
+	box-shadow: -26px 6px 15px -6px rgba(0, 0, 0, .3),
+				26px 6px 15px -6px rgba(0, 0, 0, .3);
 }
 
 @media (max-width: 1200px) {
@@ -55,3 +56,30 @@ img {
 		outline: none;
 	}
 }
+
+.section{
+	&-title {
+		text-align: center;
+		line-height: 1.2;
+		@include bold;
+		font-size: 24px;
+		margin: 0;
+		&::after {
+			content: '';
+			width: 100%;
+			align-content: center;
+			height: 2px;
+			background-color: $line-color;
+			display: block;
+			}
+		}
+		&-subtitle {
+			@include reg;
+			font-size: 14px;
+			line-height: 1.2;
+			text-align: center;
+			margin: 0;
+		}
+	} 
+
+  

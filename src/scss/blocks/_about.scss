@@ -1,0 +1,26 @@
+.about {
+	position: relative;
+
+	&-block {
+		display: flex;
+		background-color: $blocks-color;
+		padding-top: 24px;
+		padding-bottom: 40px;
+		padding-right: 16px;
+	}
+
+	&-image {
+		padding-left: 56px;
+		flex-basis: 40%;
+	}
+
+	&-text {
+		padding-left: 32px;
+		flex-basis: 60%;
+
+		&__title {
+			margin-bottom: 32px;			
+			max-width: 215px;
+		}
+	}
+}

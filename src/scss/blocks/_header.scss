@@ -8,7 +8,7 @@
 		background-color: #f28d4f;
 		display: block;
 		position: absolute;
-		top: 5px;
+		top: 0px;
 	}
 
 	&::after {
@@ -18,28 +18,42 @@
 		background-color: #f28d4f;
 		display: block;
 		position: absolute;
-		bottom: 35px;
+		bottom: 14px;
 	}
 
 	&-container {
 		background-color: $header-color;
-		padding-bottom: 50px;
+		padding-bottom: 40px;
 	}
 
 	&-block {
 		background-image: url(../img/header/рисунок_сити.jpg);
-		background-position: center;
+		background-position: center top;
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: 95%;
 		display: flex;
 	}
+	&-blocks {
+		flex-basis: 48%;
+		
+	}
+	&-blocks2 {
+		flex-basis: 52%;
+		position: relative;
+		&__image {
+			position: absolute;
+			z-index: 1;
+			bottom: -12px;
+			right: 16px;
+			width: 100%;
+		}		
+		}
+	
 
-	&-text {
-		flex-basis: 50%;
-		margin-top: 140px;
+	&-text {		
+		margin-top: 137px;
 		padding-left: 26px;
-
-		&__title {
+			&__title {
 			@include bold;
 			line-height: 1.2;
 			font-size: 48px;
@@ -47,14 +61,9 @@
 	}
 
 	&__button {
-		margin-top: 260px;
+		margin-top: 280px;
 		margin-left: 190px;
 		padding: 16px 45px;
-	}
-
-	&-image {
-		flex-basis: 55%;
-		z-index: 1;
-	}
-
+	
+}
 }
