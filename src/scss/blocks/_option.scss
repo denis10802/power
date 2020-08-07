@@ -36,14 +36,18 @@
 	&-block{			
 		display: flex;
 		justify-content: space-between;	
-		padding-top: 20px;			
+		flex-wrap: wrap;
+		padding-top: 20px;	
+				
 		&__list{			
 			text-align: center;
 			color: $header-color;
-			flex-basis: 18%;									
+			flex-basis: 18%;
+			align-self: baseline;
+														
 		}	
 		&__text {
-			margin-top: 10px;			
+			margin-top: 10px;						
 		}		
 		&__title{
 			display: block;
@@ -54,3 +58,22 @@
 	}
 }
 
+@media (max-width: 1200px){
+	.option {
+		background-position: center;
+
+		&-container{
+			width: 760px;
+		}
+		
+		&-block {
+			&__list{
+				flex-basis: 50%;
+				margin-bottom: 20px;
+			}
+			
+			
+		}
+	}
+	
+}

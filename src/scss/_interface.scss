@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 }
 
-body {
+.contant{
 	background-image: url(../img/body/протектор.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -26,11 +26,16 @@ img {
 	margin: auto;
 	box-shadow: -26px 6px 15px -6px rgba(0, 0, 0, .3),
 				26px 6px 15px -6px rgba(0, 0, 0, .3);
+	&:hover{
+		box-shadow: -26px 6px 15px -6px rgba(201, 153, 22, 0.589),
+				26px 6px 15px -6px rgba(201, 153, 22, 0.589);
+	}
+	
 }
 
 @media (max-width: 1200px) {
 	.container {
-		width: 760px;
+		width: 880px;
 	}
 }
 

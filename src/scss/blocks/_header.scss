@@ -20,22 +20,18 @@
 		position: absolute;
 		bottom: 14px;
 	}
-
-	&-container {
-		background-color: $header-color;
-		padding-bottom: 40px;
-	}
-
 	&-block {
 		background-image: url(../img/header/рисунок_сити.jpg);
-		background-position: center top;
+		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 95%;
+		background-color: $header-color;
+		padding-bottom: 36px;
 		display: flex;
 	}
 	&-blocks {
 		flex-basis: 48%;
-		
+			
 	}
 	&-blocks2 {
 		flex-basis: 52%;
@@ -43,27 +39,66 @@
 		&__image {
 			position: absolute;
 			z-index: 1;
-			bottom: -12px;
-			right: 16px;
+			bottom: -26px;
+			right: 33px;
 			width: 100%;
-		}		
+			}		
 		}
 	
 
 	&-text {		
-		margin-top: 137px;
+		margin-top: 137px;		
 		padding-left: 26px;
 			&__title {
 			@include bold;
 			line-height: 1.2;
 			font-size: 48px;
+			margin: 0;
 		}
 	}
 
 	&__button {
-		margin-top: 280px;
+		margin-top: 330px;
 		margin-left: 190px;
 		padding: 16px 45px;
-	
+		
+	}
 }
+
+@media (max-width: 1200px){
+	.header {
+		&-block {
+			background-position: top;
+			padding-bottom: 60px;
+			padding-top: 10px;
+		}
+		&-text {		
+			margin-top: 105px;		
+			padding-left: 10px;
+				&__title {				
+				font-size: 30px;
+			}
+		}
+		&-blocks {
+			flex-basis: 40%;
+			
+		}
+		&-blocks2 {
+			flex-basis: 55%;
+			&__image {
+				position: absolute;
+				z-index: 1;
+				bottom: -48px;
+				right: 5px;
+				
+			}		
+		}
+		
+		&__button {
+			margin-top: 240px;
+			margin-left: 90px;
+			padding: 12px 40px;
+			}
+
+	}
 }

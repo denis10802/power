@@ -24,3 +24,16 @@
 		}
 	}
 }
+
+@media (max-width: 1200px){
+	.about {
+		&-block {			
+			flex-direction: column;
+		}
+		&-image {
+			padding-top: 20px;
+			margin: auto;
+		}
+
+	}
+}

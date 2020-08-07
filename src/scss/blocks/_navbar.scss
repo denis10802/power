@@ -91,3 +91,14 @@
 
 	}
 }
+@media (max-width: 1200px){
+	.navbar {
+		&__hrefs {
+			margin: 10px;
+		}
+		&__phone {
+			display: none;
+		}
+
+	}
+}
