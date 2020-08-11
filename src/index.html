@@ -10,7 +10,7 @@
 
 <body>
 	<div class="contant">
-		<nav class="navbar">
+		<nav class="navbar lock-padding">
 			<div class="container">
 				<div class="navbar-block">
 					<div class="navbar-blocks">
@@ -33,7 +33,7 @@
 								<a href="#" class="navbar__hrefs">Контакты</a>
 							</div>
 							<!-- /.navbar__href -->
-							<button class="button navbar__button">заказать звонок </button>
+							<button name="#modal" class="button navbar__button modal-link "> заказать звонок</button>
 						</div>
 						<!-- /.navbar__menu -->
 					</div>
@@ -41,7 +41,7 @@
 				<!-- /.navbar-block -->
 			</div>
 		</nav>
-		<header class="header">
+		<header class="header lock-padding">
 			<div class="container">
 				<div class="header-block">
 					<div class="header-blocks">
@@ -49,7 +49,7 @@
 							<h1 class="header-text__title">Услуги спецтехники в Стерлитамаке</h1>
 						</div>
 						<!-- /.header__text -->
-						<button class="button header__button">заказать звонок </button>
+						<button name="#modal_2" class="button header__button modal-link">заказать звонок </button>
 					</div>
 					<div class="header-blocks2">
 						<img class="header-blocks2__image" src="img/header/автокран.png" alt="">
@@ -59,7 +59,7 @@
 			</div>
 
 		</header>
-		<section class="section about" id="about">
+		<section class="section about lock-padding" id="about">
 			<div class="container">
 				<div class="about-block">
 					<div class="about-text">
@@ -96,8 +96,8 @@
 			<!-- /.container -->
 		</section>
 		<!-- /.section about -->
-		<section class="section option">
-			<div class="option-container">
+		<section class="section option lock-padding">
+			<div class="option-container ">
 				<h3 class="option-container__title section-title">Почему мы ?</h3>
 				<div class="option-block">
 					<div class="option-block__list">
@@ -142,7 +142,7 @@
 			<!-- /.option-container -->
 		</section>
 		<!-- /.section option -->
-		<section class="price">
+		<section class="price lock-padding">
 			<div class="container price-container">
 				<h2 class="section-title price__title">Наша техника</h2>
 				<div class="cards">
@@ -271,7 +271,7 @@
 		<section class="footer">
 
 			<!-- /.footer-title section-title -->
-			<div class="container footer-container">
+			<div class="container footer-container lock-padding">
 				<h4 class="footer-title section-title">Контакты </h4>
 				<div class="footer-block">					
 					<div class="footer-text">						
@@ -319,6 +319,10 @@
 		<!-- /.footer -->
 	</div>
 	<!-- /.contant -->
+
+	@@include('_modal.html')
+	
+	<script src="js/modal.js"></script>
 </body>
 
 </html>
