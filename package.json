@@ -35,7 +35,9 @@
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html": "^1.0.2",
     "gulp-webpcss": "^1.1.1",
-	"include": "^1.1.0"
-	
+    "include": "^1.1.0"
+  },
+  "dependencies": {
+    "lodash.template": "^4.5.0"
   }
 }
