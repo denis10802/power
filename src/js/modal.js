@@ -87,4 +87,4 @@ function bodyUnLock() {
 	setTimeout(function () {
 		unlock = true;
 	}, timeout);
-}
+};

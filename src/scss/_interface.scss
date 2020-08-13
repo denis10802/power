@@ -3,7 +3,7 @@
 }
 
 .contant{
-	background-image: url(../img/body/протектор.jpg);
+	background-image: url(../img/body/body-bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
@@ -81,8 +81,7 @@ img {
 		&-subtitle {
 			@include reg;
 			font-size: 14px;
-			line-height: 1.2;
-			text-align: center;
+			line-height: 1.2;			
 			margin: 0;
 		}
 	} 

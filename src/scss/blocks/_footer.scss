@@ -56,7 +56,9 @@
 		}
 		&__text {
 			font-size: 14px;
+			text-decoration: none;
 			@include reg;
+			color: $font-color;
 		}
 	}
 	&-form {			

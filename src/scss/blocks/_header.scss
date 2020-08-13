@@ -1,5 +1,6 @@
 .header {
 	position: relative;
+	align-items: center;
 
 	&::before {
 		content: '';
@@ -21,7 +22,7 @@
 		bottom: 14px;
 	}
 	&-block {
-		background-image: url(../img/header/рисунок_сити.jpg);
+		background-image: url(../img/header/sity-image.jpg);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 95%;
@@ -47,7 +48,9 @@
 	
 
 	&-text {		
-		margin-top: 137px;		
+		margin-top: 180px;
+		margin-bottom: 335px;
+
 		padding-left: 26px;
 			&__title {
 			@include bold;
@@ -57,12 +60,7 @@
 		}
 	}
 
-	&__button {
-		margin-top: 330px;
-		margin-left: 190px;
-		padding: 16px 45px;
-		
-	}
+	
 }
 
 @media (max-width: 1200px){
@@ -73,8 +71,9 @@
 			padding-top: 10px;
 		}
 		&-text {		
-			margin-top: 105px;		
-			padding-left: 10px;
+			margin-top: 130px;
+   			padding-left: 10px;
+    		margin-bottom: 255px;	
 				&__title {				
 				font-size: 30px;
 			}
@@ -94,11 +93,7 @@
 			}		
 		}
 		
-		&__button {
-			margin-top: 240px;
-			margin-left: 90px;
-			padding: 12px 40px;
-			}
+		
 
 	}
 }
