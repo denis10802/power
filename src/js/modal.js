@@ -10,9 +10,9 @@ if (modalLinks.length > 0) {
 	for (let i = 0; i < modalLinks.length; i++) {
 		const modalLink = modalLinks[i];
 		modalLink.addEventListener("click", function (e) {
-			const modalName = modalLink.getAttribute ('name').replace('#', '');
+			const modalName = modalLink.getAttribute('name').replace('#', '');
 			const curentModal = document.getElementById(modalName);
-			modalOpen(curentModal);			
+			modalOpen(curentModal);
 		});
 	}
 }
@@ -44,19 +44,20 @@ function modalOpen(curentModal) {
 		});
 	}
 }
-	function modalClose(modalActive, doUnlock = true){
-		if(unlock) {
-			modalActive.classList.remove('open');
-			if(doUnlock){
-				bodyUnLock();
-			}
+
+function modalClose(modalActive, doUnlock = true) {
+	if (unlock) {
+		modalActive.classList.remove('open');
+		if (doUnlock) {
+			bodyUnLock();
 		}
 	}
+}
 
 
 
 function bodyLock() {
-	const lockPaddingValue = window.innerWidth - document.querySelector('.contant').offsetWidth + 'px';
+	const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px';
 	if (lockPadding.length > 0) {
 		for (let i = 0; i < lockPadding.length; i++) {
 			const el = lockPadding[i];
@@ -73,16 +74,16 @@ function bodyLock() {
 }
 
 function bodyUnLock() {
-	setTimeout (function(){
-		if(lockPadding.length>0){
-		for (let i=0;i<lockPadding;i++){
-			const el = lockPadding[i];
-			el.style.paddingRight = '0px';
+	setTimeout(function () {
+		if (lockPadding.length > 0) {
+			for (let i = 0; i < lockPadding; i++) {
+				const el = lockPadding[i];
+				el.style.paddingRight = '0px';
+			}
 		}
-	}
 		body.style.paddingRight = '0px';
 		body.classList.remove('lock');
-	},timeout);
+	}, timeout);
 	unlock = false;
 	setTimeout(function () {
 		unlock = true;

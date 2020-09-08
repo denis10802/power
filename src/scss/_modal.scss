@@ -45,11 +45,8 @@
 		@include bold;
 		right: 10px;
 		top: 10px;
+		width: 3%;
 	}
-
-
-
-
 	&__image {
 		width: 50%;		
 		padding-left: 40px;		
@@ -79,8 +76,6 @@
 			
 		}
 	}
-
-
 
 	&-form{		
 		padding: 30px;
@@ -146,3 +141,45 @@
 	overflow: hidden;
 }
 
+
+@media (max-width: 768px){
+	.modal {
+		&__body {
+			padding: 0;
+		}
+		&__close {
+			width: 6%;
+		}
+		&__title {
+			margin: 0;
+		}		
+		&__content {
+			
+			flex-direction: column;
+		}
+		&__image  {
+			width: 100%;
+			padding-left: 0px;
+			text-align: center;
+		}
+		&-list {			
+			padding-left: 70px;
+			padding-right: 0;
+		}
+		&-form{			
+			&__button {
+				margin-top: 0px;			
+		}
+		&__subtitle {
+			font-size: 18px;
+		}
+	}
+	.form-modal {
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 100%;
+	}
+
+
+	}
+}

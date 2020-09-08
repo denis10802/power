@@ -11,34 +11,60 @@
 
 	&-image {
 		padding-left: 56px;
-		flex-basis: 40%; 
+		flex-basis: 40%;
 	}
 
 	&-text {
 		padding-left: 32px;
 		flex-basis: 60%;
-		
+
 
 		&__title {
-			margin-bottom: 32px;			
+			margin-bottom: 32px;
 			max-width: 215px;
-			
 		}
-		&__subtitle{
+
+		&__subtitle {
 			text-align: left;
+			font-size: 18px;
 		}
 	}
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
 	.about {
-		&-block {			
+		&-block {
 			flex-direction: column;
 		}
+
 		&-image {
 			padding-top: 20px;
 			margin: auto;
 		}
 
+	}
+}
+
+@media (max-width: 768px) {
+	.about {
+		&-text {
+			&__title {
+				margin: auto;
+				margin-bottom: 30px;
+				margin-top: 24px;
+			}
+
+			&__subtitle {
+				font-size: 20px;
+			}
+		}
+
+		&-image {
+			margin-top: 50px;
+			margin-bottom: 30px;
+			padding: 10px 10px;
+			width: 80%;
+
+		}
 	}
 }
