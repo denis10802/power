@@ -16,7 +16,7 @@
 	&__line {
 		display: block;
 		position: absolute;
-		top: 44px;
+		top: 35px;
 		left: 18px;
 		right: 18px;
 		height: 6px;
@@ -47,33 +47,35 @@
 
 .c-burg {
 	&__line::before {
-		top: -20px;
+		top: -15px;
 	}
 
 	&__line::after {
-		bottom: -20px;
+		bottom: -15px;
 	}
 }
 
 .c-burg-line {
 	.c-burg__line {
-		transition: background 0s 0.3s;
+		transition: background 0s 0.1s;
+		-webkit-transition: background 0s 0.1s;
+		-moz-transition: background 0s 0.1s;
+		-ms-transition: background 0s 0.1s;
+		-o-transition: background 0s 0.1s;
 	}
 }
 
 .c-burg-line {
 	.c-burg__line::before {
-		transition-duration: 0.3s, 0.3s;
-		transition-delay: 0.3s, 0s;
+		transition-duration: 0.1s, 0.1s;
+		transition-delay: 0.1s, 0s;
 	}
 
 	.c-burg__line::after {
-		transition-duration: 0.3s, 0.3s;
-		transition-delay: 0.3s, 0s;
+		transition-duration: 0.1s, 0.1s;
+		transition-delay: 0.1s, 0s;
 	}
-}
 
-.c-burg-line {
 	.c-burg__line::before {
 		transition-property: top, transform;
 	}
@@ -81,10 +83,11 @@
 	.c-burg__line::after {
 		transition-property: bottom, transform;
 	}
-
 }
 
-.is_active {
+
+
+.c-burg-line.is_active {
 	background: #f28d4f;
 
 	.c-burg__line {
@@ -97,7 +100,6 @@
 		&::before {
 			top: 0;
 			transform: rotate(-45deg);
-
 		}
 
 		&::after {
@@ -110,7 +112,7 @@
 
 
 .nav-menu {
-	margin-top: 100px;
+	margin-top: 80px;
 	opacity: 0;
 	transition: all ease 0.8s;
 	-webkit-transition: all ease 0.8s;
@@ -122,7 +124,7 @@
 #nav-btn.navbar-activ {
 	.nav-menu {
 		margin: auto;
-		margin-top: 100px;
+		margin-top: 80px;
 		opacity: 1;
 		z-index: 5;
 	}
