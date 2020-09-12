@@ -1,6 +1,7 @@
 .header {
 	position: relative;
 	align-items: center;
+
 	&::before {
 		content: '';
 		width: 100%;
@@ -10,6 +11,7 @@
 		position: absolute;
 		top: 0px;
 	}
+
 	&::after {
 		content: '';
 		width: 100%;
@@ -19,12 +21,14 @@
 		position: absolute;
 		bottom: 14px;
 	}
-	&__logo{
+
+	&__logo {
 		position: absolute;
 		display: none;
 		top: 10px;
 		right: 190px;
 	}
+
 	&-block {
 		background-image: url(../img/header/sity-image.jpg);
 		background-position: center;
@@ -34,120 +38,149 @@
 		padding-bottom: 36px;
 		display: flex;
 	}
+
 	&-blocks {
-		flex-basis: 48%;			
+		flex-basis: 48%;
 	}
+
 	&-blocks2 {
 		flex-basis: 52%;
 		position: relative;
+
 		&__image {
 			position: absolute;
 			z-index: 1;
 			bottom: -26px;
 			right: 33px;
 			width: 100%;
-			}		
 		}
-	&-text {		
+	}
+
+	&-text {
 		margin-top: 180px;
 		margin-bottom: 335px;
 		padding-left: 26px;
-			&__title {
+
+		&__title {
 			@include bold;
 			line-height: 1.2;
 			font-size: 48px;
 			margin: 0;
 		}
-	}	
+
+		&__descr {
+			display: none;
+		}
+	}
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
 	.header {
-		
-		&::after {			
+
+		&::after {
 			bottom: 20px;
-		}		
+		}
+
 		&-block {
 			background-position: center;
 			background-size: contain;
 			padding-bottom: 60px;
 			padding-top: 10px;
 		}
-		&-text {		
+
+		&-text {
 			margin-top: 130px;
-   			padding-left: 10px;
-    		margin-bottom: 255px;	
-				&__title {				
+			padding-left: 10px;
+			margin-bottom: 255px;
+
+			&__title {
 				font-size: 30px;
 			}
 		}
+
 		&-blocks {
 			flex-basis: 45%;
-			
+
 		}
+
 		&-blocks2 {
 			flex-basis: 55%;
+
 			&__image {
 				position: absolute;
 				z-index: 1;
 				bottom: 15px;
 				right: 5px;
-				
+
 			}
 
 		}
-		
-		
+
+
 
 	}
 }
 
 @media (max-width: 768px) {
 	.header {
-		
 		&::before {
 			top: 15px;
 		}
+
 		&::after {
 			bottom: 20px;
 		}
-		&__logo{
+
+		&__logo {
 			display: block;
 			right: 76px;
 			top: 25px;
-			width: 20%;			
-		}				
-		&-block {	
-			background-size: 120%;		
+			width: 20%;
+		}
+
+		&-block {
+			background-size: 120%;
 			background-position: top;
 			flex-direction: column-reverse;
-				
+
 		}
-		&-blocks2{			
+
+		&-blocks2 {
 			margin: auto;
+
 			&__image {
-				position: relative;	
-				width: 85%;	
+				position: relative;
+				width: 85%;
 				align-items: center;
-				left: 40px;	
-				top: 16px;							
+				left: 40px;
+				top: 16px;
 			}
 		}
+
 		&-blocks {
 			margin: auto;
 			margin-bottom: 0;
 		}
+
 		&-text {
-			margin-top: 30px;  			
+			margin-top: 30px;
 			margin-bottom: 5px;
-						
-				&__title {
-					font-size: 30px;
-					text-align: center;	
-					max-width: 250px;	
-					
+			text-align: center;
+
+			&__title {
+				font-size: 30px;
+				text-align: center;
+				margin-bottom: 18px;
+
 			}
-			
+
+			&__descr {
+				display: block;
+				text-align: center;
+				@include reg;
+				font-size: 20px;
+
+			}
 		}
-	} 
+	}
 }

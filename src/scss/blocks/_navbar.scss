@@ -115,11 +115,11 @@
 	}
 }
 
-@media (min-width: 768px){
-	.navbar{
-		&__hrefs{
-			&:hover{
-				&::after{
+@media (min-width: 768px) {
+	.navbar {
+		&__hrefs {
+			&:hover {
+				&::after {
 					width: 100%;
 				}
 			}
@@ -133,6 +133,7 @@
 		&-block {
 			padding: 0;
 		}
+
 		&__logo {
 			display: none;
 		}
@@ -144,22 +145,37 @@
 		&__menu {
 			display: none;
 		}
-
 		&-mobile {
+			position: relative;
 			display: flex;
 			justify-content: space-between;
 			background-color: #9da1a4;
 
 			&__tel {
-				padding: 26px 40px;
+				padding: 20px 25px;
 			}
 
-			&__toggle {
+			&__href {
+				text-decoration: none;
+				@include reg;
+				font-size: 20px;
+				color: black;
+				padding: 15px;
 				display: block;
-				padding: 26px 40px;
-
-
 			}
+
+			&__item {
+				display: flex;
+				align-items: center;
+			}
+
+			&__icon {
+				align-content: center;
+				display: block;
+				margin-left: 40px;
+			}
+
+
 		}
 	}
 }

@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
 	<nav class="navbar lock-padding">
 		<div class="container">
 			<div class="navbar-block">
@@ -39,12 +40,40 @@
 				</div>
 			</div>
 			<!-- /.navbar-block -->
-			<div class="navbar-mobile">
-				<span class="navbar-mobile__toggle"><img src="img/navbar/burger.png" alt=""></span>
-				<a href="tel: 8 3473 25-37-39" class="navbar-mobile__tel"><img src="img/navbar/telIcon.png" alt=""></a>
+			<div class="navbar-mobile" id="nav-btn">
+				<div class="nav-menu">
+					<ul class="navbar-mobile__links">
+						<li class="navbar-mobile__item">
+							<span class="navbar-mobile__icon">
+								<img src="img/navbar/mobile__icon.png" alt="">
+							</span>
+							<a href="#about" class="navbar-mobile__href">О компании</a>
+						</li>
+						<li class="navbar-mobile__item">
+							<span class="navbar-mobile__icon">
+								<img src="img/navbar/mobile__icon.png" alt="">
+							</span>
+							<a href="#price" class="navbar-mobile__href">Техника</a>
+						</li>
+						<li class="navbar-mobile__item">
+							<span class="navbar-mobile__icon">
+								<img src="img/navbar/mobile__icon.png" alt="">
+							</span>
+							<a href="#footer" class="navbar-mobile__href">Контакты</a>
+						</li>
+					</ul>
+				</div>
+				<button class="c-burg c-burg-line">
+					<span class="c-burg__line"></span>
+				</button>
+				<a href="tel: 8 3473 25-37-39" class="navbar-mobile__tel">
+					<img src="img/navbar/telIcon.png" alt="">
+				</a>
+
 			</div>
 		</div>
 	</nav>
+
 
 	<header class="header lock-padding">
 		<div class="container">
@@ -53,6 +82,8 @@
 					<div class="header-text">
 						<h1 class="header-text__title">Услуги спецтехники в Стерлитамаке</h1>
 					</div>
+					<span class="header-text__descr">Переставим, загрузим, поднимем, опустим - все, что вам
+						понадобится</span>
 				</div>
 				<div class="header-blocks2">
 					<img class="header-blocks2__image" src="img/header/kran.png" alt="">
@@ -326,5 +357,7 @@
 	@@include('_modal.html')
 
 	<script src="js/modal.js"></script>
+	<script src="js/burger.js"></script>
 </body>
+
 </html>
