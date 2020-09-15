@@ -688,28 +688,31 @@ img {
   top: 35px;
   left: 18px;
   right: 18px;
-  height: 6px;
+  height: 8px;
   background: #ffd250;
+  border: 1px solid #000;
 }
 
 .c-burg__line::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
   height: 6px;
   background: #ffd250;
   left: 0;
+  border: 1px solid #000;
 }
 
 .c-burg__line::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
   height: 6px;
   background: #ffd250;
   left: 0;
+  border: 1px solid #000;
 }
 
 .c-burg__line::before {
@@ -721,11 +724,13 @@ img {
 }
 
 .c-burg-line .c-burg__line {
-  transition: background 0s 0.1s;
   -webkit-transition: background 0s 0.1s;
-  -moz-transition: background 0s 0.1s;
-  -ms-transition: background 0s 0.1s;
-  -o-transition: background 0s 0.1s;
+  transition: background 0s 0.1s;
+  transition: border 0s 0.1s;
+  -webkit-transition: border 0s 0.1s;
+  -moz-transition: border 0s 0.1s;
+  -ms-transition: border 0s 0.1s;
+  -o-transition: border 0s 0.1s;
 }
 
 .c-burg-line .c-burg__line::before {
@@ -762,6 +767,7 @@ img {
 
 .c-burg-line.is_active .c-burg__line {
   background: none;
+  border: none;
 }
 
 .c-burg-line.is_active .c-burg__line::before {
@@ -1623,7 +1629,7 @@ img {
 
 .footer-form {
   text-align: center;
-  width: 30%;
+  width: 33%;
   margin-right: 100px;
   margin-top: 30px;
   -webkit-box-align: center;

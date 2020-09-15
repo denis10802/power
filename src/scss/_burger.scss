@@ -1,145 +1,143 @@
 .c-burg {
-	position: absolute;
-	display: block;
-	overflow: hidden;
-	width: 85px;
-	height: 100%;
-	box-shadow: none;
-	border: none;
-	background: #9da1a4;
-	margin-left: 10px;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  width: 85px;
+  height: 100%;
+  box-shadow: none;
+  border: none;
+  background: #9da1a4;
+  margin-left: 10px;
 
-	&:focus {
-		outline: none;
-	}
+  &:focus {
+    outline: none;
+  }
 
-	&__line {
-		display: block;
-		position: absolute;
-		top: 35px;
-		left: 18px;
-		right: 18px;
-		height: 6px;
-		background: #ffd250;
+  &__line {
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 18px;
+    right: 18px;
+    height: 8px;
+    background: #ffd250;
+    border: 1px solid #000;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 6px;
+      background: #ffd250;
+      left: 0;
+      border: 1px solid #000;
+    }
 
-		&::before {
-			content: '';
-			position: absolute;
-			display: block;
-			width: 100%;
-			height: 6px;
-			background: #ffd250;
-			left: 0;
-		}
-
-		&::after {
-			content: '';
-			position: absolute;
-			display: block;
-			width: 100%;
-			height: 6px;
-			background: #ffd250;
-			left: 0;
-
-		}
-	}
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 6px;
+      background: #ffd250;
+      left: 0;
+      border: 1px solid #000;
+    }
+  }
 }
 
 .c-burg {
-	&__line::before {
-		top: -15px;
-	}
+  &__line::before {
+    top: -15px;
+  }
 
-	&__line::after {
-		bottom: -15px;
-	}
+  &__line::after {
+    bottom: -15px;
+  }
 }
 
 .c-burg-line {
-	.c-burg__line {
-		transition: background 0s 0.1s;
-		-webkit-transition: background 0s 0.1s;
-		-moz-transition: background 0s 0.1s;
-		-ms-transition: background 0s 0.1s;
-		-o-transition: background 0s 0.1s;
-	}
+  .c-burg__line {
+    transition: background 0s 0.1s;
+    transition: border 0s 0.1s;
+    -webkit-transition: border 0s 0.1s;
+    -moz-transition: border 0s 0.1s;
+    -ms-transition: border 0s 0.1s;
+    -o-transition: border 0s 0.1s;
+  }
 }
 
 .c-burg-line {
-	.c-burg__line::before {
-		transition-duration: 0.1s, 0.1s;
-		transition-delay: 0.1s, 0s;
-	}
+  .c-burg__line::before {
+    transition-duration: 0.1s, 0.1s;
+    transition-delay: 0.1s, 0s;
+  }
 
-	.c-burg__line::after {
-		transition-duration: 0.1s, 0.1s;
-		transition-delay: 0.1s, 0s;
-	}
+  .c-burg__line::after {
+    transition-duration: 0.1s, 0.1s;
+    transition-delay: 0.1s, 0s;
+  }
 
-	.c-burg__line::before {
-		transition-property: top, transform;
-	}
+  .c-burg__line::before {
+    transition-property: top, transform;
+  }
 
-	.c-burg__line::after {
-		transition-property: bottom, transform;
-	}
-}
-
-
-
-.c-burg-line.is_active {
-	background: #f28d4f;
-
-	.c-burg__line {
-		background: none;
-	}
+  .c-burg__line::after {
+    transition-property: bottom, transform;
+  }
 }
 
 .c-burg-line.is_active {
-	.c-burg__line {
-		&::before {
-			top: 0;
-			transform: rotate(-45deg);
-		}
+  background: #f28d4f;
 
-		&::after {
-			bottom: 0;
-			transform: rotate(45deg);
-
-		}
-	}
+  .c-burg__line {
+    background: none;
+    border: none;
+  }
 }
 
+.c-burg-line.is_active {
+  .c-burg__line {
+    &::before {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(45deg);
+    }
+  }
+}
 
 .nav-menu {
-	margin-top: 80px;
-	opacity: 0;
-	transition: all ease 0.8s;
-	-webkit-transition: all ease 0.8s;
-	-moz-transition: all ease 0.8s;
-	-ms-transition: all ease 0.8s;
-	-o-transition: all ease 0.8s;
+  margin-top: 80px;
+  opacity: 0;
+  transition: all ease 0.8s;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -ms-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
 }
 
 #nav-btn.navbar-activ {
-	.nav-menu {
-		margin: auto;
-		margin-top: 80px;
-		opacity: 1;
-		z-index: 5;
-	}
+  .nav-menu {
+    margin: auto;
+    margin-top: 80px;
+    opacity: 1;
+    z-index: 5;
+  }
 }
 
 .navbar-mobile__links {
-	position: absolute;
-	width: 95%;
-	margin: auto;
-	margin-left: 10px;
-	padding: 0;
-	background: white;
-	border: 10px solid #f28d4f;
-	text-align: left;
-	list-style: none;
-	left: 0;
-
+  position: absolute;
+  width: 95%;
+  margin: auto;
+  margin-left: 10px;
+  padding: 0;
+  background: white;
+  border: 10px solid #f28d4f;
+  text-align: left;
+  list-style: none;
+  left: 0;
 }
